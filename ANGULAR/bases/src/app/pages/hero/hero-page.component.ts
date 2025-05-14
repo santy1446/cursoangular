@@ -11,6 +11,11 @@ export class HeroPageComponent {
     name = signal('Ironman');
     age = signal(45);
 
+    /**
+     * Valor computado que se ejecuta cada vez que cambia una de las señales usadas para calcular un nuevo valor
+     * A diferencia de un effect, un valor computado devuelve un valor
+     */
+
     heroDescription = computed(() => {
         const description = `${this.name()} - ${this.age()}`;
         return description

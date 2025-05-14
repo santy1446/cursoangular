@@ -13,11 +13,11 @@ export class CounterComponent {
 
     increseBy(value: number) {
         this.counter += value;
-        this.counterSignal.update( current => current + value);
+        this.counterSignal.update( current => current + value); //Actualizar una señal haciendo uso de su valor actual
     }
 
     resetCounter() {
         this.counter = 0;
-        this.counterSignal.set(0);
+        this.counterSignal.set(0); //Actualizar una señal sobre escribiendo su valor
     }
 }

@@ -16,7 +16,11 @@ export class DragonballService {
         this.characters.update((list) => [...list, character]);
     }
 
-    //Efectos
+    /**
+     * Los efectos son funciones que se ejecutan cada vez que cambia una señal
+     * se usa para ejecutar código secundario pero no devuelve un valor
+     * en este caso se usa para guardar los personajes en el localStorage
+     */
     saveToLocalStorage = effect(() => {
         localStorage.setItem('characters', JSON.stringify(this.characters()));
     });

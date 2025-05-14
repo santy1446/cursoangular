@@ -13,6 +13,6 @@ import { DragonballService } from "../../services/dragonball.service";
 })
 export class DragonballSuperComponent {
 
-    public dragonballService = inject(DragonballService);
+    public dragonballService = inject(DragonballService);//* Inyectar el servicio de dragonball */
 
 }
